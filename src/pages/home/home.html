@@ -1,14 +1,115 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+    court counter
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
-</ion-content>
+    <ion-grid>
+        <ion-row>
+      <ion-col col-6 >
+        <h1 text-center> Team A</h1>
+
+        <h2 text-center>{{scoreTeamA}} </h2>
+
+        <p text-center> Score</p>
+       
+
+          <ion-list no-padding no-lines >
+<ion-item>
+  
+        <button ion-button full round (click) ="teamA(3)">-3</button>
+  
+</ion-item >
+          <ion-item >
+           
+                <button ion-button full round (click) = "teamA(2)">-2</button>  
+            
+              </ion-item>
+
+       
+
+             <ion-item >
+          
+                <button ion-button full round (click) = "teamA(1)">-1</button>  
+             
+              </ion-item>
+          </ion-list>
+      </ion-col>
+   <ion-col>
+      
+
+  
+          <h1 text-center> Team B</h1>
+          <h2 text-center>{{scoreTeamB}}</h2>
+          <p text-center> Score</p>
+    <ion-list no-lines no-padding>
+<ion-item >
+<ion-grid>
+  <ion-row>
+    <ion-col col-6>
+      <button ion-button full round (click) ="teamA(3)">+3 </button>
+    </ion-col>
+    <ion-col col-6>
+      <button ion-button full round (click) ="teamA(-3)">-3 </button>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+</ion-item>
+            <ion-item>
+              <ion-grid>
+                <ion-row>
+                  <ion-col col-4>
+                      <button ion-button full round (click) = "teamA(2)">+2</button>
+                  </ion-col>
+                  <ion-col col-4>
+                      <button ion-button full round (click) = "teamA(-2)">-2</button>
+                  </ion-col>
+                </ion-row>
+              </ion-grid>   
+            </ion-item>
+
+            <ion-item>
+              <ion-grid>
+                <ion-row>
+                  <ion-col>
+                      <button ion-button full round (click) = "teamA(1)">+1</button> 
+                  </ion-col>
+                  <ion-col>
+                      <button ion-button full round (click) = "teamA(1)">-1</button> 
+                  </ion-col> 
+                </ion-row>
+              </ion-grid>
+                </ion-item>
+                
+
+  </ion-list>
+   </ion-col>
+
+  
+
+
+
+</ion-row> 
+</ion-grid>
+
+<button ion-button full outline (click)="reset()" >Reset</button>
+<button ion-button full outline (click)="end()" >End Match</button>
+  </ion-content>
+
+
+ 
+  
+   
+    
+
+ 
+
+
+
+
+ 
+
+ 
